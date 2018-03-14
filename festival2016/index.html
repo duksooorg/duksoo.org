@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<title>기능영재반 게임 전시회</title>
+	<script src="./file/ext/jquery-1.12.2.min.js"></script>
+	<script>
+		$(function () {
+			var open = [ new Date("2016-08-26 09:30:00"), new Date("2016-08-26 12:40:00") ];
+			var close = [ new Date("2016-08-26 12:10:00"), new Date("2016-08-26 14:00:00") ];
+			var now = Date.now(), nowOpen = false;
+
+			for (var i = 0, length = open.length; i < length; i++) {
+				if (now >= open[i].getTime() && now <= close[i].getTime()) {
+					nowOpen = true;
+					break;
+				}
+			}
+
+			if (nowOpen)
+				$(".play-no").hide();
+			else
+				$(".play-yes").hide();
+		});
+	</script>
+	<style>
+		@font-face {
+			font-family: 'NotoSansKR';
+			font-style: normal;
+			font-weight: 400;
+			src: url(./file/ext/NotoSansKR-Regular.eot);
+			src: url(./file/ext/NotoSansKR-Regular.eot?#iefix) format('embedded-opentype'),
+			url(./file/ext/NotoSansKR-Regular.woff2) format('woff2'),
+			url(./file/ext/NotoSansKR-Regular.woff) format('woff'),
+			url(./file/ext/NotoSansKR-Regular.otf) format('opentype');
+		}
+
+
+		@font-face {
+			font-family: 'NotoSansKR';
+			font-style: normal;
+			font-weight: 600;
+			src: url(./file/ext/NotoSansKR-Medium.eot);
+			src: url(./file/ext/NotoSansKR-Medium.eot?#iefix) format('embedded-opentype'),
+			url(./file/ext/NotoSansKR-Medium.woff2) format('woff2'),
+			url(./file/ext/NotoSansKR-Medium.woff) format('woff'),
+			url(./file/ext/NotoSansKR-Medium.otf) format('opentype');
+		}
+
+		body { margin: 0; padding: 0; font-family: NotoSansKR, "나눔고딕", sans-serif; }
+		h2 { margin: 0; padding: 20px; border-bottom: 1px solid #aaa; background: #ced2ab; text-align: center; }
+		.play-yes { color: #3e801d; }
+		.play-no { color: #bd1e1e; }
+		#content { margin: 0 20px 20px; }
+		.item { overflow: hidden; padding: 20px; border: 1px solid #aaa; border-top: 0; }
+		.item h3 { margin: 0 0 10px; font-size: 24px; text-align: center; }
+		.item h3 a { font-size: 16px; font-weight: normal; }
+		.item h4 { margin: 0; font-size: 16px; }
+		.item h4:last-of-type { margin-bottom: 15px; }
+		.item img { float: left; width: 100%; max-width: 400px; margin-right: 15px; }
+	</style>
+</head>
+<body>
+	<h2 class="play-yes">현재 아래 게임들은 1-17에서 플레이 &amp; 투표하실 수 있습니다.</h2>
+	<h2 class="play-no">현재 부스가 열리지 않았습니다.</h2>
+	<div id="content">
+		<div class="item">
+			<a href="./img/1to50.jpg"><img src="./img/1to50.jpg" alt="1 TO 50"></a>
+			<h3>1 TO 50 <a href="./file/1to50.html">하러가기</a></h3>
+			<h4>개발 : 2학년 김학연</h4>
+			<h4>언어 : WEB (HTML, CSS, JavaScript)</h4>
+			스마트폰에서 유명했던 1부터 50까지 차례대로 누르는 간단한 게임인 1to50의 웹 이식판입니다.<br />
+			랭킹은 브라우저에 저장됩니다. (WebSQL)
+		</div>
+		<div class="item">
+			<a href="./img/sokoban.jpg"><img src="./img/sokoban.jpg" alt="소코반"></a>
+			<h3>소코반 <a href="./file/sokoban.exe">다운로드</a></h3>
+			<h4>개발 : 1학년 장욱진</h4>
+			<h4>언어 : C</h4>
+			흔히 상자밀기, 창고지기, 푸쉬푸쉬 등으로 알려진 게임입니다.<br />
+		</div>
+		<div class="item">
+			<h3>테트리스 <a href="./file/tetris.exe">다운로드</a></h3>
+			<h4>개발 : 2학년 김찬호</h4>
+			<h4>언어 : C</h4>
+			평범한 테트리스입니다.<br />
+		</div>
+		<div class="item">
+			<h3>베스킨라빈스 31 <a href="./file/31.exe">다운로드</a></h3>
+			<h4>개발 : 1학년 오상민</h4>
+			<h4>언어 : C</h4>
+			31을 말하는 사람이 지는 게임입니다.<br />
+		</div>
+		<div class="item">
+			<h3>숫자 맞추기 <a href="./file/updown.exe">다운로드</a></h3>
+			<h4>개발 : 1학년 박민지</h4>
+			<h4>언어 : C</h4>
+			숫자를 업, 다운으로 맞추는 게임입니다.<br />
+		</div>
+	</div>
+</body>
+</html>

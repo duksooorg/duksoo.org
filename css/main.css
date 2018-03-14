@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@import url(//cdn.jsdelivr.net/font-nanum/1.0/nanumgothic/nanumgothic.css);
+
+body {
+	font-family: "Nanum Gothic", sans-serif;
+	font-size: 16px;
+}
+
+.section {
+	position: relative;
+	overflow: hidden;
+}
+#sg_festival {
+	background: url("../img/festival.jpg") center center no-repeat;
+	background-size: cover;
+}
+#sg_festival h2, #sg_festival h3 {
+	color: #fff;
+	font-size: 64px;
+	font-weight: 800;
+	text-align: center;
+	text-shadow: 0 0 5px #000;
+}
+#sg_festival h3 a {
+	color: #ccc;
+	font-size: 36px;
+	font-weight: 700;
+}
+#sg_start {
+	background: url("../img/back1.jpg") center center no-repeat;
+	background-size: cover;
+}
+#sg_info {
+	background: url("../img/back2.jpg") center center no-repeat;
+	background-size: cover;
+}
+#sg_contact {
+	background: #444;
+	color: #fff;
+	height: auto;
+}
+.backer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+}
+.dupper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #3350CB;
+	opacity: .4;
+}
+.textbox {
+	padding: 20px;
+	color: #fff;
+	font-size: 1.5em;
+	text-shadow: 0 0 2px #000;
+}
+#sg_start .textbox {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 100px;
+	text-align: right;
+}
+#sg_info .textbox {
+	padding: 20px 120px 20px 70px;
+	text-align: center;
+}
+#sg_info .fp-controlArrow.fp-next { right: 65px; }
+#sg_contact .textbox {
+	font-size: 1em;
+}
+.textbox h2 {
+	margin-bottom: 20px;
+	font-size: 1.5em;
+	/*font-weight: bold;*/
+	text-shadow: 0 0 4px #000;
+}
+.textbox .btn, .textbox .dropdown {
+	text-shadow: none;
+}
+.textbox .dropdown-menu {
+	color: #333;
+}
+
+#fp-nav, .fp-slidesNav {
+	background: #eee;
+	border-radius: 15px;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+	background: #fff;
+	box-shadow: 0 0 2px #000;
+}
